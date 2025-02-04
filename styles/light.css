@@ -4,13 +4,145 @@
   переключая тему
 */
 
-:root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+/* .theme_light {
+  --background-url: url(../images/cover-image-light.png);
+  --text-color: #353430;
+  --buttonActive: #353430;
+  --accent-color: #FF8DCB;
+  --background-color: #FFF1F7;
+} */
+
+.page.theme_light {
+  --background-url: url(../images/cover-image-light.png);
+  --text-color: #353430;
+  --buttonActive: #353430;
+  --accent-color: #FF8DCB;
+  --h1-shadow: #FF0070;
+  --angle-color: #353430;
+  --background-color: #FFF1F7;
+  --h1: #FFC2E6;
+  --button-border: rgb(53,52,48, 0.4);
+  --focus-color: #353430;
+  --rec-display: none;
+  --h2-color: #353430;
+  --button-color: #353430;
+  --text-h3-color: #353430;
+
+  /* .title-accent {
+    color: var(--text-color);
+  }
+
+  .page {
+    background-color: var(--background-color);
+  }
+
+  .card-title {
+    color: var(--text-color);
+  } */
+
+  /* .rec {
+    display: none;
+  } */
+
+  /* .header-text, .card-title {
+    background-color: var(--accent-color);
+    color: var( --text-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--text-color);
+  }
+
+  .h1, .footer-text {
+    color: var(--h1);
+  } */
+
+  /* .header__theme-menu-button:hover {
+    border-color: rgb(53,52,48, 0.4);
+  } */
+  
+  /* .header__theme-menu-button:focus {
+    border-bottom-color: var(--text-color);
+    outline: none;
+  }
+
+  .section-link:focus {
+    outline-color: var(--text-color);
+  }
+  
+  .angle-end-accent::before {
+    display: none;
+  }
+
+  .header::before, .header::after, .footer::after, .footer::before {
+    border-color: var(--text-color);
+  } */
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-url: url(../images/cover-image-light.png);
+    --text-color: #353430;
+    --buttonActive: #353430;
+    --accent-color: #FF8DCB;
+    --h2-color: #353430;
+    --background-color: #FFF1F7;
+    --h1: #FFC2E6;
+    --button-border: rgb(53,52,48, 0.4);
+    --button-color: #353430;
+    --focus-color: #353430;
+    --rec-display: none;
+    --angle-color: #353430;
+    --h1-shadow: #FF0070;
+    --text-h3-color: #353430;
+  }
+  
+  /* .header__theme-menu-button_active {
+    border-color: var(--buttonActive);
+  }
+  
+  .title-accent {
+    color: var( --text-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--text-color);
+  }
+  
+  .header::before, .footer::after {
+    border-top-color: var(--text-color);
+    border-right-color: var(--text-color);
+  }
+
+  .header::after, .footer::before {
+    border-left-color: var(--text-color);
+    border-bottom-color: var(--text-color);
+  }
+
+  .header__theme-menu-button:hover {
+    border-color: var(--text-color);
+  }
+  
+  .header__theme-menu-button:focus {
+    border-bottom-color: var(--text-color);
+    outline: none;
+  }
+  
+  .header__theme-menu-button_active {
+    border-color: var(--text-color);
+  }
+
+  .header-text, .card-title {
+    background-color: #FF8DCB;
+    color: var( --text-color);
+  }
+
+  .h1, .footer-text {
+    color: var(--h1);
+    text-shadow: 4px 4px 0 var(--accent-color);
+  } */
+
+  /* .rec {
+    display: none;
+  } */
 }
