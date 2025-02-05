@@ -1,27 +1,16 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
 .page {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   overflow: auto;
-  background-color: var(--background-color);
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-}
-
-
-
-.container {
-  margin: 0 10px 0 10px;
-}
-
-.decorated-zone {
-  height: 100vh;
-  min-height: 668px;
   background-image: var(--background-url);
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 40px;
+  background-attachment: fixed;
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
@@ -29,29 +18,34 @@
   flex-direction: column;
   align-items: end;
   position: relative;
-  height: 100%;
+  height: 100vh;
+  max-height: 668px;
 }
 
-.header::before {
+.container {
+  margin: 0 10px 0 10px;
+}
+
+.decorated-zone::before {
   content: "";
   position: absolute;
   width: 22px;
   height: 22px;
   border-top: 1px solid var(--angle-color);
   border-right: 1px solid var(--angle-color);
-  right: 0;
+  right: 10px;
   top: 10px;
 }
 
-.header::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   width: 22px;
   height: 22px;
   border-left: 1px solid var(--angle-color);
   border-bottom: 1px solid var(--angle-color);
-  left: 0;
-  bottom: 9px;
+  left: 10px;
+  bottom: 10px;
 }
 
 .rec {
@@ -59,17 +53,20 @@
   text-transform: uppercase;
   display: var(--rec-display);
   color: var(--accent-color);
-  margin-top: 10px;
-  margin-right: 6px;
+  top: 9px;
+  right: 19px;
   min-width: 53px;
   font-family: "IBM Plex mono", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: default;
 }
 
 .rec::after {
   content: "";
   display: inline-block;
   margin-left: 12px;
-  box-shadow: 0px 0px 8px 4px var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
   background-color: var(--accent-color);
   border-radius: 50%;
   width: 9px;
@@ -81,7 +78,7 @@
 .header__theme-menu {
   margin: 19.5% 6% 10% 0;
   padding-left: 19px;
-  width: 70px;
+  width: 6rem;
   padding-top: 4px;
   position: relative;
 }
@@ -98,7 +95,7 @@
   appearance: none;
   min-width: 70px;
   min-height: 26px;
-  size: 18px;
+  font-size: 18px;
   background: transparent;
   background-color: transparent;
   text-transform: lowercase;
@@ -111,6 +108,7 @@
 
 .header-text, h3 {
   color: var(--text-h3-color);
+  cursor: default;
 }
 
 .header__theme-menu-button:hover {
@@ -118,30 +116,35 @@
 }
 
 .header__theme-menu-button:focus {
+outline: none;
+border: none;
+}
+
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--focus-color);
   outline: none;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--buttonActive);
+  border: 1px solid var(--button-active);
+  pointer-events: none;
 }
 
 
-.h1 {
+.title-decor {
   display: block;
-  width: 95%;
-  font-size: 116px;
-  color: var(--h1);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--h1-title-decor);
   text-shadow: 4px 4px 0 var(--accent-color);
   font-weight: 700;
   line-height: 96px;
   font-family: var(--font);
-  margin-top: 33px;
-  margin-right: 18px;
+  cursor: default;
+  align-self: start;
 }
 
 .header-text {
-  margin-top: 54px;
+  margin: 54px 10px 0;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -149,6 +152,8 @@
   min-width: 345px;
   background-color: var(--accent-color);
   margin-bottom: 65px;
+  cursor: default;
+  margin-left: 10px;
 }
 
 .content-wrapper {
@@ -162,6 +167,7 @@
   font-weight: 700;
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
   line-height: 23.4px;
+  cursor: default;
 }
 
 .title-accent {
@@ -189,6 +195,7 @@
   line-height: 23.4px;
   color: var(--text-color);
   margin-top: 10px;
+  cursor: default;
 }
 
 .section {
@@ -201,12 +208,16 @@
   margin-bottom: 40px;
 }
 
+.section:first-child {
+  margin-top: 60px;
+}
+
 .section-img .card-title {
   margin-bottom: 14px;
 }
 
 .section-link {
-  text-shadow: 1px 1px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   color: var(--text-color);
   text-decoration: none;
 }
@@ -216,6 +227,10 @@
 }
 
 .section-link:focus {
+  outline: none;
+}
+
+.section-link:focus-visible {
   outline: 1px solid var(--text-color);
 }
 
@@ -224,9 +239,9 @@
 }
 
 .images-container {
-  display: grid;
-  grid-template-columns: 355px;
-  grid-template-rows: 138px 355px 237px 355px 237px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   gap: 10px;
 }
 
@@ -237,44 +252,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.footer::after {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border-top: 1px solid var(--angle-color);
-  border-right: 1px solid var(--angle-color);
-  right: 0;
-  top: 10px;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border-left: 1px solid var(--angle-color);
-  border-bottom: 1px solid var(--angle-color);
-  left: 0;
-  bottom: 13px;
+  align-items: center;
+  justify-items: center;
 }
 
 .footer-text {
   display: block;
-  width: 95%;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--h1);
-  text-shadow: 4px 4px 0 var(--h1-shadow);
+  color: var(--h1-title-decor);
+  text-shadow: 2px 2px 0 var(--h1-shadow);
   font-weight: 700;
   line-height: 96px;
   font-family: var(--font);
   margin-left: 3px;
-}
-
-.h1, .footer-text {
-  text-shadow: 4px 4px 0 var(--accent-color);
+  position: relative;
 }
 
 .img-section {
@@ -295,22 +286,18 @@
     margin-bottom: 80px;
   }
 
-  .rec {
-    margin-top: 20px;
-  }
-
   .container {
     margin: 0 20px;
   }
 
-  .decorated-zone {
-    min-height: 1024px;
+  .header {
+    min-height: clamp(1024px, 100vh, 1025px);
     margin-bottom: 53px;
   }
 
-  .h1 {
+  .title-decor {
     margin: 98px 57px 0 0;
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .title {
@@ -320,16 +307,8 @@
   .header-text {
     width: 364px;
     margin-top: 166px;
-  }
-
-  .header::before {
-    right: 0;
-    top: 20px;
-  }
-
-  .header::after {
-    left: 0;
-    bottom: 20px;
+    margin-right: 10px;
+    margin-left: 0;
   }
 
   .rec::after {
@@ -362,8 +341,6 @@
   .card-title {
     margin-top: 6px;
   }
-
-
 
   .article-tablet-title {
     margin-top: 0;
@@ -408,16 +385,6 @@
     margin-top: 5%;
   }
 
-  .footer::after {
-    top: 42px;
-    right: 0;
-  }
-
-  .footer::before {
-    left: 0;
-    bottom: 0;
-  }
-
   .sunset-column,
   .street-column {
     grid-column: span 2;
@@ -434,18 +401,14 @@
     max-width: 1024px;
   }
 
-  .decorated-zone {
-    min-height: 768px;
-    background-size: cover;
-    margin-bottom: 60px;
-  }
-
   .container {
     margin: 0 20px 0 20px;
   }
 
   .header {
     min-height: 768px;
+    max-height: max-content;
+    justify-content: center;
   }
 
   .heared-decor-wrapper {
@@ -461,21 +424,9 @@
     width: fit-content;
   }
 
-  .header::before {
-    right: 0px;
-    top: 19px;
-  }
-
-  .header::after {
-    left: 0;
-    bottom: 20px;
-  }
-
-  .h1 {
-    font-size: 157px;
+  .title-decor {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     padding-top: 19.6%;
-    margin-right: 25%;
-    width: 77%;
     text-shadow: 4px 4px 0 var(--h1-shadow);
   }
 
@@ -484,6 +435,7 @@
     margin-bottom: 55px;
     margin-top: 13%;
     min-height: fit-content;
+    margin-left: 10px;
   }
 
   .article-wrapper {
