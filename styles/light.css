@@ -17,7 +17,7 @@
   --text-color: #353430;
   --button-active: #353430;
   --accent-color: #FF8DCB;
-  --h1-shadow: #FF0070;
+  --h1-shadow: #FF8DCB;
   --angle-color: #353430;
   --background-color: #FFF1F7;
   --h1-title-decor: #FFC2E6;
@@ -87,14 +87,15 @@
     --accent-color: #FF8DCB;
     --h2-color: #353430;
     --background-color: #FFF1F7;
-    --h1: #FFC2E6;
+    --h1-title-decor: #FFC2E6;
     --button-border: rgb(53,52,48, 0.4);
     --button-color: #353430;
     --focus-color: #353430;
     --rec-display: none;
     --angle-color: #353430;
-    --h1-shadow: #FF0070;
+    --h1-shadow: #FF8DCB;
     --text-h3-color: #353430;
+    --button-active: #353430;
   }
   
   /* .header__theme-menu-button_active {
@@ -138,7 +139,7 @@
   }
 
   .h1, .footer-text {
-    color: var(--h1);
+    color: var(--h1-title-decor);
     text-shadow: 4px 4px 0 var(--accent-color);
   } */
 

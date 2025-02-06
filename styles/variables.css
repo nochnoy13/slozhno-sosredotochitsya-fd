@@ -8,9 +8,9 @@
   --background-url: url(../images/cover-image-dark.png);
   --text-color: #F1B2CE;
   --font: 'IBM Plex mono', sans-serif;
-  --buttonActive: #ff0070;
+  --button-active: #ff0070;
   --background-color: #000028;
-  --h1: #DB00FF;
+  --h1-title-decor: #DB00FF;
   --button-border: rgb(255,0,112, 0.4);
   --focus-color: #ff0070;
   --rec-display: inline-block;

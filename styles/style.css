@@ -13,13 +13,21 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
-.header {
+/*.header {
   display: flex;
   flex-direction: column;
   align-items: end;
   position: relative;
   height: 100vh;
   max-height: 668px;
+}*/
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  height: 100vh;
+  position:relative;
+  width: 100%;
 }
 
 .container {
@@ -76,11 +84,12 @@
 }
 
 .header__theme-menu {
-  margin: 19.5% 6% 10% 0;
+  margin-top: 18%;
   padding-left: 19px;
   width: 6rem;
   padding-top: 4px;
   position: relative;
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -141,19 +150,21 @@ border: none;
   font-family: var(--font);
   cursor: default;
   align-self: start;
+  grid-row: 2;
+  padding-left: 3%;
 }
 
 .header-text {
-  margin: 54px 10px 0;
+  margin: 0 10px 66px;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
   font-family: var(--font);
   min-width: 345px;
   background-color: var(--accent-color);
-  margin-bottom: 65px;
   cursor: default;
-  margin-left: 10px;
+  grid-row: 3;
+  align-self: end;
 }
 
 .content-wrapper {
@@ -209,7 +220,7 @@ border: none;
 }
 
 .section:first-child {
-  margin-top: 60px;
+  margin-top: 41px;
 }
 
 .section-img .card-title {
@@ -260,12 +271,12 @@ border: none;
   display: block;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--h1-title-decor);
-  text-shadow: 2px 2px 0 var(--h1-shadow);
+  text-shadow: 4px 4px 0 var(--h1-shadow);
   font-weight: 700;
   line-height: 96px;
   font-family: var(--font);
-  margin-left: 3px;
   position: relative;
+  padding-bottom: 3%;
 }
 
 .img-section {
@@ -286,18 +297,22 @@ border: none;
     margin-bottom: 80px;
   }
 
+  .section:last-child {
+    margin-bottom: 60px;
+  }
+
   .container {
     margin: 0 20px;
   }
 
   .header {
-    min-height: clamp(1024px, 100vh, 1025px);
+    min-height: 1024px;
     margin-bottom: 53px;
   }
 
   .title-decor {
-    margin: 98px 57px 0 0;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    padding: 0;
   }
 
   .title {
@@ -305,10 +320,11 @@ border: none;
   }
 
   .header-text {
-    width: 364px;
-    margin-top: 166px;
-    margin-right: 10px;
-    margin-left: 0;
+    max-width: 47%;
+    justify-self: end;
+    align-self: center;
+    margin-right: 3%;
+    margin-top: 5%;
   }
 
   .rec::after {
@@ -321,9 +337,8 @@ border: none;
   }
 
   .header__theme-menu {
-    margin: 25% 3.5% 11% 0;
-    padding-left: 25px;
-    padding-top: 5px;
+    margin: 24% 1.5%;
+    justify-self: end;
   }
 
   .title-accent-wrap {
@@ -381,8 +396,8 @@ border: none;
 
   .footer-text {
     text-align: center;
-    margin-left: 2%;
-    margin-top: 5%;
+    margin-top: 3%;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
   .sunset-column,
@@ -394,6 +409,21 @@ border: none;
   .tape-row {
     grid-row: span 2;
   }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .rec {
+    top: 20px;
+    right: 28px;
+  }
 }
 
 @media (width >= 1024px) {
@@ -401,14 +431,17 @@ border: none;
     max-width: 1024px;
   }
 
+  .rec {
+    top: 28px;
+    right: 27px;
+  }
+
   .container {
-    margin: 0 20px 0 20px;
+    margin: -16px 20px 0 20px;
   }
 
   .header {
     min-height: 768px;
-    max-height: max-content;
-    justify-content: center;
   }
 
   .heared-decor-wrapper {
@@ -419,23 +452,21 @@ border: none;
   }
 
   .header__theme-menu {
-    margin: 2% 38.5% 0 0;
+    margin: 2.6% 38.7% 0 0;
     padding: 0;
     width: fit-content;
   }
 
   .title-decor {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    padding-top: 19.6%;
     text-shadow: 4px 4px 0 var(--h1-shadow);
+    
   }
 
   .header-text {
-    width: 491px;
-    margin-bottom: 55px;
-    margin-top: 13%;
+    max-width: 48%;
     min-height: fit-content;
-    margin-left: 10px;
+    margin: -3% 2% 0 0;
   }
 
   .article-wrapper {
@@ -514,13 +545,23 @@ border: none;
 
   .footer {
     min-height: 768px;
-    margin-bottom: 20px;
   }
 
   .footer-text {
-    font-size: 157px;
-    margin-top: 4%;
-    margin-left: 2.5%;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    margin-top: 1.4%;
     text-shadow: 4px 4px 0 var(--h1-shadow);
+  }
+
+  .decorated-zone::before {
+    top: 29px;
+  }
+
+  .decorated-zone::after {
+    bottom: 43px;
+  }
+
+  .section:last-child {
+    margin-bottom: 51px;
   }
 }
