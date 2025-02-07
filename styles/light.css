@@ -26,7 +26,7 @@
   --rec-display: none;
   --h2-color: #353430;
   --button-color: #353430;
-  --text-h3-color: #353430;
+  --subtitle-color: #353430;
 
   /* .title-accent {
     color: var(--text-color);
@@ -94,7 +94,7 @@
     --rec-display: none;
     --angle-color: #353430;
     --h1-shadow: #FF8DCB;
-    --text-h3-color: #353430;
+    --subtitle-color: #353430;
     --button-active: #353430;
   }
   
@@ -140,7 +140,7 @@
 
   .h1, .footer-text {
     color: var(--h1-title-decor);
-    text-shadow: 4px 4px 0 var(--accent-color);
+    text-shadow: 2px 2px 0 var(--accent-color);
   } */
 
   /* .rec {
