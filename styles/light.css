@@ -20,11 +20,11 @@
   --h1-shadow: #FF8DCB;
   --angle-color: #353430;
   --background-color: #FFF1F7;
-  --h1-title-decor: #FFC2E6;
+  --title-decor: #FFC2E6;
   --button-border: rgb(53,52,48, 0.4);
   --focus-color: #353430;
   --rec-display: none;
-  --h2-color: #353430;
+  --title-accent-color: #353430;
   --button-color: #353430;
   --subtitle-color: #353430;
 
@@ -85,15 +85,15 @@
     --text-color: #353430;
     --buttonActive: #353430;
     --accent-color: #FF8DCB;
-    --h2-color: #353430;
+    --title-accent-color: #353430;
     --background-color: #FFF1F7;
-    --h1-title-decor: #FFC2E6;
+    --title-decor: #FFC2E6;
     --button-border: rgb(53,52,48, 0.4);
     --button-color: #353430;
     --focus-color: #353430;
     --rec-display: none;
     --angle-color: #353430;
-    --h1-shadow: #FF8DCB;
+    --title-shadow: #FF8DCB;
     --subtitle-color: #353430;
     --button-active: #353430;
   }
@@ -139,7 +139,7 @@
   }
 
   .h1, .footer-text {
-    color: var(--h1-title-decor);
+    color: var(--title-decor);
     text-shadow: 2px 2px 0 var(--accent-color);
   } */
 

@@ -143,8 +143,8 @@ border: none;
 .title-decor {
   display: block;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--h1-title-decor);
-  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--title-decor);
+  text-shadow: 4px 4px 0 var(--accent-color);
   font-weight: 700;
   line-height: 96px;
   font-family: var(--font);
@@ -182,7 +182,7 @@ border: none;
 }
 
 .title-accent {
-  color: var(--h2-color);
+  color: var(--title-accent-color);
 }
 
 .title-tablet-card {
@@ -270,8 +270,8 @@ border: none;
 .footer-text {
   display: block;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--h1-title-decor);
-  text-shadow: 2px 2px 0 var(--h1-shadow);
+  color: var(--title-decor);
+  text-shadow: 2px 2px 0 var(--title-shadow);
   font-weight: 700;
   line-height: 96px;
   font-family: var(--font);
@@ -494,7 +494,7 @@ border: none;
 
   .title-decor {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    text-shadow: 2px 2px 0 var(--h1-shadow);
+    text-shadow: 4px 4px 0 var(--title-shadow);
     
   }
 
@@ -588,7 +588,7 @@ border: none;
 
   .footer-text {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
-    text-shadow: 2px 2px 0 var(--h1-shadow);
+    text-shadow: 2px 2px 0 var(--title-shadow);
     margin-top: 0;
   }
 
